@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-1pbpv%ph!z=ga2mz(4m^o$jo#4=+d$nq5)(hr2*%o04+syi5vh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['organic-pancake-9rq97jrxfxjj9-8000.app.github.dev', 'localhost', '127.0.0.1']
 
 
 # Application definition
