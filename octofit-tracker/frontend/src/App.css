@@ -83,17 +83,17 @@ table tr:hover {
 }
 
 .logo {
-  height: 50px;
-  margin-right: 1rem;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 50px; /* Kept from HEAD */
+  margin-right: 1rem; /* Kept from HEAD */
+  padding: 1.5em; /* Merged from incoming */
+  will-change: filter; /* Merged from incoming */
+  transition: filter 300ms; /* Merged from incoming */
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #646cffaa); /* Merged from incoming */
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Merged from incoming */
 }
 
 @keyframes logo-spin {
