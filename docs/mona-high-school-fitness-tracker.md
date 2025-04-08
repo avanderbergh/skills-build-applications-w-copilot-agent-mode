@@ -98,9 +98,9 @@ pip install -r monafit-tracker/backend/requirements.txt
 
 django-admin startproject monafit_tracker monafit-tracker/backend
 
-npx create-react-app monafit-tracker/frontend
+pnpm create vite monafit-tracker/frontend --template react
 
-npm install bootstrap monafit-tracker/frontend
+pnpm install bootstrap --prefix monafit-tracker/frontend
 
 echo "import 'bootstrap/dist/css/bootstrap.min.css';" >> src/index.js
 
@@ -640,13 +640,13 @@ python manage.py runserver
 ```bash
 mkdir -p monafit-tracker/frontend
 
-npx create-react-app monafit-tracker/frontend
+pnpm create vite monafit-tracker/frontend --template react
 
-npm install bootstrap --prefix monafit-tracker/frontend
+pnpm install bootstrap --prefix monafit-tracker/frontend
 
 echo "import 'bootstrap/dist/css/bootstrap.min.css';" >> src/index.js
 
-npm install react-router-dom --prefix monafit-tracker/frontend
+pnpm install react-router-dom --prefix monafit-tracker/frontend
 ```
 
 ### package.json
