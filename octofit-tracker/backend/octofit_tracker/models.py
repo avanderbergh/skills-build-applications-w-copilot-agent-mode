@@ -16,6 +16,7 @@ class Activity(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     activity_type = models.CharField(max_length=100)
     duration = models.DurationField()
+    date = models.DateField(null=True)  # Removed auto_now_add to allow setting custom dates
 
 class Leaderboard(models.Model):
     _id = models.ObjectIdField()

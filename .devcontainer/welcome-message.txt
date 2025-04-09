@@ -1,4 +1,19 @@
-👋 Welcome to building a full stack fitness application with GitHub Copilot agent mode! 
-We are thrilled that you are here and we hope you are excited to explore the capabilities of Copilot!
-🏋🏽🔥💪🏼🎧 As the gym teacher of Mergington High School you have been tasked with building a fitness app for your students.
-📃 GitHub Copilot documentation: https://docs.github.com/en/copilot
+Welcome to OctoFit App Development Environment!
+
+This environment is set up with:
+- Python & Django for backend development (port 8000)
+- React for frontend development (port 3000)
+- MongoDB database running in a separate container (port 27017)
+  - Username: root
+  - Password: example
+  - Connection string: mongodb://root:example@localhost:27017/
+
+The environment includes a desktop GUI that can be accessed through a web browser.
+Any GUI-based commands executed from the VS Code terminal will appear on this desktop automatically.
+
+To access the desktop GUI:
+1. Click on the "Ports" tab in VS Code
+2. Look for port 6080
+3. Click on the "Open in Browser" icon
+
+Happy coding!
