@@ -20,21 +20,15 @@ a:hover {
 }
 
 nav {
-  background-color: #264653; /* Dark teal navigation */
-  color: white;
-  padding: 1rem;
+  /* Removing these styles as they conflict with Bootstrap navbar */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 nav a {
-  color: white;
+  /* Removing these styles as they conflict with Bootstrap navbar */
   margin: 0 1rem;
-}
-
-nav a:hover {
-  color: #e9c46a; /* Yellow hover effect */
 }
 
 button {
@@ -90,10 +84,10 @@ table tr:hover {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #646cffaa); /* Merged from incoming */
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Merged from incoming */
 }
 
 @keyframes logo-spin {
@@ -117,4 +111,99 @@ table tr:hover {
 
 .read-the-docs {
   color: #888;
+}
+
+/* Add padding and background color to the main container */
+.container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated navigation styles with enhanced contrast */
+.navbar {
+  background-color: #264653 !important; /* Dark teal background */
+  padding: 1rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.navbar-brand {
+  color: #f8f9fa !important; /* Very light gray, almost white - with !important to override Bootstrap */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: #e9c46a !important; /* Yellow on hover */
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #f8f9fa !important; /* Very light gray, almost white - with !important to override Bootstrap */
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #e9c46a !important; /* Yellow hover effect */
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  border-color: rgba(248, 249, 250, 0.8);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28248, 249, 250, 0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Style the table */
+.table {
+  margin-top: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Center the welcome message */
+h1 {
+  text-align: center;
+  color: #343a40;
+}
+
+/* Ensure links are visible by increasing specificity */
+.navbar .navbar-brand {
+  color: white !important; /* Pure white for maximum visibility */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .navbar-brand:hover {
+  color: #e9c46a !important; /* Yellow on hover */
+  text-decoration: none;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: white !important; /* Pure white for maximum visibility */
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #e9c46a !important; /* Yellow hover effect */
+  text-decoration: none;
+}
+
+/* Ensure the navbar text is visible */
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: white !important;
 }

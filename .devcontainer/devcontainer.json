@@ -1,33 +1,53 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+    "name": "OctoFit App codespace",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/skills-build-applications-w-copilot-agent-mode",
     "hostRequirements": {
         "cpus": 4
     },
-    "name": "OctoFit App codespace",
     "postCreateCommand": "sudo chmod +x ./.devcontainer/post_create.sh && ./.devcontainer/post_create.sh",
     "postStartCommand": "sudo chmod +x ./.devcontainer/post_start.sh && ./.devcontainer/post_start.sh",
+    "features": {
+        "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    },
     "customizations": {
         "vscode": {
-        "extensions": [
-            "github.copilot@insiders", // GitHub Copilot + Copilot Chat insiders
-            "markdown-lint.markdownlinter",
-            "ms-python.python", // Python extension
-            "ms-python.vscode-pylance" // Pylance extension for Python
-        ]}
+            "extensions": [
+                "github.copilot", // GitHub Copilot + Copilot Chat insiders
+                "markdown-lint.markdownlinter",
+                "ms-python.python", // Python extension
+                "ms-python.vscode-pylance" // Pylance extension for Python
+            ]
+        }
     },
     "forwardPorts": [
         3000, // React default port
         8000, // Django default port
-        27017 // MongoDB default port
+        27017, // MongoDB default port
+        8081, // MongoDB Express port
+        6080 /// VNC port
     ],
-    "portAttributes": {
+    "portsAttributes": {
         "3000": { // React port attributes
-        "label": "octofit-tracker",
-        "requireLocalPort": true
-      },      
+            "label": "octofit-tracker",
+            "requireLocalPort": true
+        },
         "8000": { // Django port attributes
-        "label": "octofit-rest-api",
-        "requireLocalPort": true
+            "label": "octofit-rest-api",
+            "requireLocalPort": true
+        },
+        "27017": { // MongoDB port attributes
+            "label": "mongodb",
+            "requireLocalPort": true
+        },
+        "8081": { // MongoDB Express attributes
+            "label": "mongo-express",
+            "requireLocalPort": true
+        },
+        "6080": { // VNC port attributes
+            "label": "desktop",
+            "requireLocalPort": true
         }
     }
 }
